@@ -59,6 +59,7 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
             <version>4.27.0</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- Proxy for API requests -->
