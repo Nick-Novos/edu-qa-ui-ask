@@ -46,6 +46,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Required for run tests via mvn -->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>5.11.4</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- Proxy for API requests -->
         <dependency>
             <groupId>net.lightbody.bmp</groupId>
@@ -61,12 +69,16 @@
             <version>2.18.0</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- class net.lightbody.bmp.core.har.Har -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.18.0</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- class com.fasterxml.jackson.core.exc.StreamReadException -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>

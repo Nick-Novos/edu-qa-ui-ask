@@ -6,9 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/registration",
-        glue = {"com/nixan/ask/definitions", "com/nixan/ask/support"},
-        tags = ""
+        features = "src/test/resources/features",
+        glue = {"com/nixan/ask/definitions", "com/nixan/ask/support"}
 )
 public class TestRunner {
 }
