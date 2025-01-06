@@ -62,6 +62,13 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.9.2</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- Proxy for API requests -->
         <dependency>
             <groupId>net.lightbody.bmp</groupId>
