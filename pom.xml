@@ -54,6 +54,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- ChromeDriver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>4.27.0</version>
+        </dependency>
+
         <!-- Proxy for API requests -->
         <dependency>
             <groupId>net.lightbody.bmp</groupId>
