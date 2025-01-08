@@ -54,18 +54,19 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Cucumber - Allure adapter -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>2.29.1</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- ChromeDriver -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
             <version>4.27.0</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.9.2</version>
             <scope>test</scope>
         </dependency>
 
@@ -125,6 +126,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.2</version>
+                <configuration>
+                    <printSummary>true</printSummary>
+                    <redirectTestOutputToFile>false</redirectTestOutputToFile>
+                </configuration>
             </plugin>
 
             <!-- Allure Plugin -->

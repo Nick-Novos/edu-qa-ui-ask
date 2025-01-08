@@ -18,13 +18,25 @@ public class TestContext {
     private static BrowserMobProxy proxy;
 
     public static void initialize() {
-        driver = new ChromeDriver();
+        ChromeOptions options = initOptions();
+        initialize(options);
+    }
+
+    private static void initialize(ChromeOptions options) {
+        driver = new ChromeDriver(options);
+    }
+
+    private static ChromeOptions initOptions() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--window-size=1920x1080");
+        return options;
     }
 
     public static void initializeWithProxy() {
-        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = initOptions();
         setProxy(options);
-        driver = new ChromeDriver(options);
+        initialize(options);
         proxy.newHar("ask-qa.portnov.com");
         proxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
     }

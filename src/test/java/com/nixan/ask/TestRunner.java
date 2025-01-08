@@ -6,8 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin = {"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
         features = "src/test/resources/features",
-        glue = {"com/nixan/ask/definitions", "com/nixan/ask/support"}
+        glue = {"com/nixan/ask/definitions", "com/nixan/ask/support"},
+        tags = ""
 )
 public class TestRunner {
 }
