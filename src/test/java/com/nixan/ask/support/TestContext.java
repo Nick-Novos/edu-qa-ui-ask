@@ -50,6 +50,11 @@ public class TestContext {
     }
 
     public static void tearDown() {
-        driver.quit();
+        if (proxy != null) {
+            proxy.stop();
+        }
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }

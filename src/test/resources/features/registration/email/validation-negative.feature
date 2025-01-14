@@ -15,7 +15,7 @@ Feature: Warning validation message displayed for invalid email
       | Confirm Password | ABC123 |
     And the user clicks the "Register" button
     Then a warning message "This field is required" should be displayed next to the "Email" field
-    And no warning messages are displayed for any field other than "Email"
+    And there is exactly one warning message on the form
 
 
   @IgnoreQuotes
@@ -29,7 +29,7 @@ Feature: Warning validation message displayed for invalid email
       | Confirm Password | ABC123  |
     And the user clicks the "Register" button
     Then a warning message "Should be a valid email address" should be displayed next to the "Email" field
-    And no warning messages are displayed for any field other than "Email"
+    And there is exactly one warning message on the form
 
     Examples:
       | email               |
@@ -50,7 +50,7 @@ Feature: Warning validation message displayed for invalid email
       | Confirm Password | ABC123  |
     And the user clicks the "Register" button
     Then a warning message "Should be a valid email address" should be displayed next to the "Email" field
-    And no warning messages are displayed for any field other than "Email"
+    And there is exactly one warning message on the form
 
     Examples:
       | email             |
@@ -76,7 +76,7 @@ Feature: Warning validation message displayed for invalid email
     And the user fills in an email "<email>" containing 129 characters
     And the user clicks the "Register" button
     Then a warning message "Should be a valid email address" should be displayed next to the "Email" field
-    And no warning messages are displayed for any field other than "Email"
+    And there is exactly one warning message on the form
 
     Examples:
       | email                                                                                                    |
@@ -94,7 +94,7 @@ Feature: Warning validation message displayed for invalid email
     And the user fills in an email "<email>" with local port of 65 characters
     And the user clicks the "Register" button
     Then a warning message "Should be a valid email address" should be displayed next to the "Email" field
-    And no warning messages are displayed for any field other than "Email"
+    And there is exactly one warning message on the form
 
     Examples:
       | email                                                                         |
@@ -112,7 +112,7 @@ Feature: Warning validation message displayed for invalid email
     And the user fills in an email "<email>" with domain of 64 characters
     And the user clicks the "Register" button
     Then a warning message "Should be a valid email address" should be displayed next to the "Email" field
-    And no warning messages are displayed for any field other than "Email"
+    And there is exactly one warning message on the form
 
     Examples:
       | email                                                                       |
@@ -130,7 +130,7 @@ Feature: Warning validation message displayed for invalid email
     And the user fills in an email "<email>" with top-level domain of 64 characters
     And the user clicks the "Register" button
     Then a warning message "Should be a valid email address" should be displayed next to the "Email" field
-    And no warning messages are displayed for any field other than "Email"
+    And there is exactly one warning message on the form
 
     Examples:
       | email                                                                         |

@@ -15,7 +15,7 @@ Feature: Warning validation message displayed for invalid first name
       | Confirm Password | ABC123           |
     And the user clicks the "Register" button
     Then a warning message "This field is required" should be displayed next to the "First Name" field
-    And no warning messages are displayed for any field other than "First Name"
+    And there is exactly one warning message on the form
 
 
   @IgnoreQuotes
@@ -29,7 +29,7 @@ Feature: Warning validation message displayed for invalid first name
       | Confirm Password | ABC123           |
     And the user clicks the "Register" button
     Then a warning message "Whitespaces are not allowed" should be displayed next to the "First Name" field
-    And no warning messages are displayed for any field other than "First Name"
+    And there is exactly one warning message on the form
 
     Examples:
       | first_name |
@@ -51,7 +51,7 @@ Feature: Warning validation message displayed for invalid first name
       | Confirm Password | ABC123           |
     And the user clicks the "Register" button
     Then a warning message "Maximum 255 characters" should be displayed next to the "First Name" field
-    And no warning messages are displayed for any field other than "First Name"
+    And there is exactly one warning message on the form
 
     Examples:
       | first_name                                                                                                                                                                                                                                                       |
